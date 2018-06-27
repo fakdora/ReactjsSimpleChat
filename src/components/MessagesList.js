@@ -10,18 +10,17 @@ class MessagesList extends Component {
 
     return (
       <div>
-        <h3>Messages</h3>
         <ul>
-    {
-      (messages)
-      ? messages.map((message) => {
-        let key = message.author + message.timestamp
-        return <li
-          key={key}
-        >{message.author}: {message.text}</li>
-      })
-      : <li></li>
-    }
+          {
+            (messages)
+            ? messages.map((message) => {
+              let key = message.author + message.timestamp
+              return <li
+                key={key}
+              >{message.author}: {message.text}</li>
+            })
+            : <li></li>
+          }
         </ul>
       </div>
     )

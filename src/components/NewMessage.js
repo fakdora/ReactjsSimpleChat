@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { MAX_LENGTH_MESSAGE } from './Constants'
-import { addMessage } from '../actions/messages'
+import { handleAddMessage } from '../actions/messages'
+import { MAX_LENGTH_MESSAGE } from '../constants/message'
 import { CURRENT_USER } from '../constants/authedUser'
 
 
@@ -20,7 +20,7 @@ class NewMessage extends Component {
     e.preventDefault()
     console.log('newMessage submitted', this.state.newMessage)
     this.setState(() => ({ newMessage: ""}))
-    this.props.dispatch(addMessage(this.state.newMessage), CURRENT_USER)
+    this.props.dispatch(handleAddMessage(this.state.newMessage))
   }
 
   render() {

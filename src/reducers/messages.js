@@ -1,4 +1,8 @@
-import { RECEIVE_MESSAGES, ADD_MESSAGE } from '../actions/messages'
+import { 
+  RECEIVE_MESSAGES, 
+  ADD_MESSAGE,
+  RESPOND_MESSAGE 
+} from '../actions/messages'
 
 
 export default function messages(state=[], action) {
@@ -17,6 +21,13 @@ export default function messages(state=[], action) {
         action.message
       ]
     }
+
+    case RESPOND_MESSAGE: {
+      return [
+        ...state,
+        action.message
+      ]
+    } 
 
     default: {
       return state

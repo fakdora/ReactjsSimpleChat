@@ -4,6 +4,18 @@ body {
   font-family: sans-serif;
 }
 
+ol,
+ul {
+  list-style: none;
+}
+
 .user-avatar {
   height: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: auto 12px;
+}
+
+.user-info-box {
+  margin: 20px 0;
 }

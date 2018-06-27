@@ -6,7 +6,6 @@ export let users = {
   {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    chatName: 'sarahedo',
     avatarURL: "https://pbs.twimg.com/profile_images/675531002043699200/x7kAHIgw_400x400.jpg",
     status: 'active',
     currentlyPlayingGame: '',
@@ -15,7 +14,6 @@ export let users = {
   {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    chatName: 'Tyler',
     avatarURL: "https://pbs.twimg.com/profile_images/743087049192919040/Wmug__uf_400x400.jpg",
     status: 'away',
     currentlyPlayingGame: 'battlefield',
@@ -24,12 +22,25 @@ export let users = {
   {
     id: 'johndoe',
     name: 'John Doe',
-    chatName: 'john doe',
     avatarURL: "https://upload.wikimedia.org/wikipedia/commons/c/c9/David_Robinson_%28Team_USA%29.jpg",
     status: 'idle',
     currentlyPlayingGame: '',
     lastActiveTimestamp: 1488579767190,
-  }]
+  },
+    {
+      id: 'mario',
+      name: 'Mario',
+      avatarURL: "https://upload.wikimedia.org/wikipedia/commons/c/c9/David_Robinson_%28Team_USA%29.jpg",
+      status: 'idle',
+      currentlyPlayingGame: '',
+      lastActiveTimestamp: 1488579767190,
+      responses: [
+        "Hey! It's me! Mario~",
+        "Lets-a go!",
+      ]
+    }
+
+]
 }
 
 export let messages = {
@@ -105,7 +116,6 @@ export let users1 = {
     {
       id: 'sarahedo',
       name: 'Sarah Edo',
-      chatName: 'sarahedo',
       avatarURL: "https://pbs.twimg.com/profile_images/675531002043699200/x7kAHIgw_400x400.jpg",
       status: 'active',
       currentlyPlayingGame: '',
@@ -114,7 +124,6 @@ export let users1 = {
     {
       id: 'tylermcginnis',
       name: 'Tyler McGinnis',
-      chatName: 'Tyler',
       avatarURL: "https://pbs.twimg.com/profile_images/743087049192919040/Wmug__uf_400x400.jpg",
       status: 'away',
       currentlyPlayingGame: 'battlefield',
@@ -123,7 +132,6 @@ export let users1 = {
     {
       id: 'johndoe',
       name: 'John Doe',
-      chatName: 'john doe',
       avatarURL: "https://upload.wikimedia.org/wikipedia/commons/c/c9/David_Robinson_%28Team_USA%29.jpg",
       status: 'idle',
       currentlyPlayingGame: '',
