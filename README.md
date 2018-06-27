@@ -1,6 +1,6 @@
 
 # Gamers' Chatroom
-* Multi-user chatroom where bots and the user can chat
+* Multi-user chatroom where bots and an user can chat.
 
 ## To run
 ```
@@ -21,7 +21,7 @@ yarn start
 
 ## Notes
 * Bots are automatically and randomly chatting every 10 seconds.
-Only active and idle bots are participating in chatting.
-The bot's status will change to 'active' if they chatted.
-* If the last message of the bot was 45 seconds ago, bot's status will change to 'idle' automatically
+Only active and idle bots are participating in this auto chatting.
+The bot's status will change to 'active' if it chatted.
+* If the last message of the bot was 45 seconds ago, the bot's status will change to 'idle' automatically.
 
