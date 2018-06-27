@@ -45,7 +45,7 @@ class App extends Component {
           }
         })
         
-      }, 15000)
+      }, 5000)
     } catch (e) {
       console.log(e)
     }
