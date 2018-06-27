@@ -2,10 +2,18 @@
 # Gamers' Chatroom
 * Multi-user chatroom where bots and the user can chat
 
-## Technologies Used
+## To run
+```
+yarn install
+```
+```
+yarn start
+```
+
+## Technologies
 * React
 * Redux
-* Semantic UI React for design and layout
+* [Semantic UI React](https://react.semantic-ui.com/introduction) for design and layout
 
 ## Instructions
 * User can type in their message into the text field and press 'submit' button.
