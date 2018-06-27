@@ -7,8 +7,10 @@ import { showLoading, hideLoading } from 'react-redux-loading'
 export function handleInitialData() {
   return (dispatch) => {
     dispatch(showLoading())
+    
     return getInitialData()
       .then(({ users, messages }) => {
+        
         dispatch(receiveUsers(users))
         dispatch(receiveMessages(messages))
         dispatch(hideLoading())

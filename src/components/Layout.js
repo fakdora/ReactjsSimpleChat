@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   Grid,
   Header,
@@ -28,12 +28,6 @@ const style = {
 
 class Layout extends Component {
 
-  handleMessageSubmit = (e, msg) => {
-    e.preventDefault()
-    // console.log('e  ',  msg)
-    console.log('message in here ', msg)
-  }
-
   render() {
     return (
       <div>
@@ -42,7 +36,7 @@ class Layout extends Component {
           <Grid columns={2} doubling stackable>
             <Grid.Column width={10}>
               <Segment><MessagesList /></Segment>
-              <NewMessage handleMessageSubmit={this.handleMessageSubmit} />
+              <NewMessage />
             </Grid.Column>
             <Grid.Column width={6}>
               <Segment><UsersList /></Segment>

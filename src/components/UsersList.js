@@ -1,48 +1,11 @@
 import React, { Component } from 'react'
-import { getUsers } from '../utils/api'
+import { connect } from 'react-redux'
 
 
 class UsersList extends Component {
-  state = {
-    active: [],
-    idle: [],
-    away: [],
-  }
-
-  componentDidMount () {
-    this.fetchAllUsers()
-  }
-
-  fetchAllUsers = () => {
-    getUsers()
-      .then(users => {
-        const { members } = users
-        let active = []
-        let idle = []
-        let away = []
-
-        if (Array.isArray(members)) {
-          active = members.filter(member => (
-            member.status === "active"
-          ))
-          idle = members.filter(member => (
-            member.status === "idle"
-          ))
-          away = members.filter(member => (
-            member.status === "away"
-          ))
-        }
-        this.setState({
-          active: active,
-          idle: idle,
-          away: away
-        })
-        
-      })
-  }
 
   render() {
-    const { active, idle, away } = this.state 
+    const { active, idle, away } = this.props 
 
     return (
       <div>
@@ -108,4 +71,28 @@ class UsersList extends Component {
   }
 }
 
-export default UsersList
+function mapStateToProps({ users }) {
+  let active = []
+  let idle = []
+  let away = []
+  
+  if (Array.isArray(users)) {
+    active = users.filter(user => (
+      user.status === "active"
+    ))
+    idle = users.filter(user => (
+      user.status === "idle"
+    ))
+    away = users.filter(user => (
+      user.status === "away"
+    ))
+  }
+
+  return {
+    active,
+    idle,
+    away
+  }
+}
+
+export default connect(mapStateToProps)(UsersList)

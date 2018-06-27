@@ -1,10 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
 import { MAX_LENGTH_MESSAGE } from './Constants'
+import { addMessage } from '../actions/messages'
+import { CURRENT_USER } from '../constants/authedUser'
+
 
 class NewMessage extends Component {
 
   state = {
-    message: ""
+    newMessage: ""
   }
 
   handleChange = (e) => {
@@ -13,29 +18,30 @@ class NewMessage extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log('message submitted', this.state.message)
-    this.setState(() => ({message: ""}))
+    console.log('newMessage submitted', this.state.newMessage)
+    this.setState(() => ({ newMessage: ""}))
+    this.props.dispatch(addMessage(this.state.newMessage), CURRENT_USER)
   }
 
   render() {
-    const { message } = this.state
+    const { newMessage } = this.state
 
     return (
       <div>
-        <form className="new-message" onSubmit={(e) => this.props.handleMessageSubmit(e, this.state.message)}>
+        <form className="new-message" onSubmit={this.handleSubmit}>
           
           <textarea type="text"
             className="input"
             placeholder="Type your message"
-            value={message}
-            name="message"
+            value={newMessage}
+            name="newMessage"
             onChange={this.handleChange}
             maxLength={MAX_LENGTH_MESSAGE}
           /> 
           <button
             className="btn"
             type="submit"
-            disabled={message === ""}>
+            disabled={newMessage === ""}>
             Submit
           </button>
         </form>
@@ -44,4 +50,4 @@ class NewMessage extends Component {
   }
 }
 
-export default NewMessage
+export default connect()(NewMessage)

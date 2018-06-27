@@ -1,16 +1,21 @@
-import { RECEIVE_MESSAGES } from '../actions/messages'
+import { RECEIVE_MESSAGES, ADD_MESSAGE } from '../actions/messages'
 
 
-export default function messages(state={}, action) {
+export default function messages(state=[], action) {
 
   switch (action.type) {
     case RECEIVE_MESSAGES: {
-      console.log('action.msg: ', action.messages)
-      console.log('typeof action.messages: ', typeof action.messages)
-      return {
+      return [
         ...state,
-        ...action.messages
-      }
+        ...action.messages.messages
+      ]
+    }
+
+    case ADD_MESSAGE: {
+      return [
+        ...state,
+        action.message
+      ]
     }
 
     default: {

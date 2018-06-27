@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import LoadingBar from 'react-redux-loading'
+
 import Layout from './Layout'
 import { handleInitialData } from '../actions/shared'
 
@@ -11,10 +14,17 @@ class App extends Component {
   render() {
     return (
       <div>
+        <LoadingBar />
         <Layout />
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps({users}) {
+  return {
+    loading: users === null
+  }
+}
+
+export default connect()(App)
