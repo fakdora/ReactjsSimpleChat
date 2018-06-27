@@ -27,9 +27,11 @@ class UserCategory extends Component {
 
                   <span>{user.id}</span>
                   {
-                    (user.status=="away" && user.currentlyPlayingGame)
-                      ?  <div className="user-current-game">(playing {user.currentlyPlayingGame})</div>
-                      : ""
+                    (user.status=="away")
+                      ? (user.currentlyPlayingGame)
+                        ? <div className="user-game-status">(playing {user.currentlyPlayingGame})</div>
+                        : <div className="user-game-status">(Logged out)</div>
+                      : null
                   }
                 </div>
               </div>

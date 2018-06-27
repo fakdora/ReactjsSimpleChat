@@ -48,6 +48,12 @@ function findMatchingBot(users, match) {
 }
 
 function dispatchResponseFromBot(bot, dispatch) {
+  
+  if (bot.status === "away") {
+    displayAwayMessage(bot, dispatch)
+    return
+  }
+
   const maximum = bot.responses.length - 1
   const minimum = 0
   const randomResponseIndex = Math.floor(
@@ -57,6 +63,19 @@ function dispatchResponseFromBot(bot, dispatch) {
   dispatch(respondMessage(formattedResponse))
   dispatch(updateLastActiveTimestamp(bot))
 }
+
+function displayAwayMessage(bot, dispatch) {
+  let message = "User can't respond to you right now. "
+
+  if (bot.currentlyPlayingGame) {
+    message += `Currently playing ${bot.currentlyPlayingGame}.`
+  } else {
+    message += "Currently logged off."
+  }
+  const formattedResponse = formatMessage(message, 'admin')
+  dispatch(respondMessage(formattedResponse))
+}
+
 
 function messageContainsUserHandle(message) {
   const nameRegex = /@[\w]+/

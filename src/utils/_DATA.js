@@ -12,13 +12,21 @@ export let users = {
     lastActiveTimestamp: 1467166872634,
   },
   {
-    id: 'tylermcginnis',
+    id: 'tyler',
     name: 'Tyler McGinnis',
     avatarURL: "https://pbs.twimg.com/profile_images/743087049192919040/Wmug__uf_400x400.jpg",
     status: 'away',
     currentlyPlayingGame: 'battlefield',
     lastActiveTimestamp: 1489579767190,
   },
+    {
+      id: 'tyler1',
+      name: 'Tyler McGinnis',
+      avatarURL: "https://pbs.twimg.com/profile_images/743087049192919040/Wmug__uf_400x400.jpg",
+      status: 'away',
+      currentlyPlayingGame: '',
+      lastActiveTimestamp: 1489579767190,
+    },
   {
     id: 'johndoe',
     name: 'John Doe',
