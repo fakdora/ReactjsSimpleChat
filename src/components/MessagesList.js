@@ -9,7 +9,7 @@ class MessagesList extends Component {
     const { messages } = this.props
 
     return (
-      <div>
+      <div className="chat-message-list">
         <ul>
           {
             (messages)

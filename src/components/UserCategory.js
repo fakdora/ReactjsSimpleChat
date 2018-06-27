@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Icon } from 'semantic-ui-react'
-import { connect } from 'react-redux'
-import LoadingBar from 'react-redux-loading'
+
 
 class UserCategory extends Component {
 
@@ -27,7 +26,7 @@ class UserCategory extends Component {
 
                   <span>{user.id}</span>
                   {
-                    (user.status=="away")
+                    (user.status === "away")
                       ? (user.currentlyPlayingGame)
                         ? <div className="user-game-status">(playing {user.currentlyPlayingGame})</div>
                         : <div className="user-game-status">(Logged out)</div>

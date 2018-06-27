@@ -12,6 +12,16 @@ ul {
 .btn {
   display: block;
   margin: 20px auto;
+  width: 100%;
+  
+}
+
+.chat-message-list {
+  min-height: 500px;
+}
+
+.user-list {
+  min-height: 550px;
 }
 
 .user-avatar {

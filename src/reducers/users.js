@@ -14,7 +14,7 @@ export default function users(state=[], action) {
     }
 
     case UPDATE_LAST_ACTIVE_TIMESTAMP: {
-      for (var i = 0; i < state.length; i++) {
+      for (let i = 0; i < state.length; i++) {
         if (state[i].id === action.user.id) {
           state[i]['lastActiveTimestamp'] = Date.now()
           state[i]['status'] = 'active'
@@ -25,7 +25,7 @@ export default function users(state=[], action) {
     }
 
     case UPDATE_USER_STATUS: {
-      for (var i = 0; i < state.length; i++) {
+      for (let i = 0; i < state.length; i++) {
         if (state[i].id === action.user.id) {
           state[i]['status'] = action.status
           break

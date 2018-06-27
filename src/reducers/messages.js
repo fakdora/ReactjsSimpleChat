@@ -17,12 +17,12 @@ export default function messages(state=[], action) {
 
     case ADD_MESSAGE: {
       let newState = [...state, action.message]
-      return newState.slice(newState.length - 50, newState.length)
+      return newState.slice(newState.length-53, newState.length)
     }
 
     case RESPOND_MESSAGE: {
       let newState = [...state, action.message]
-      return newState.slice(newState.length - 50, newState.length)
+      return newState.slice(newState.length-53, newState.length)
     } 
 
     default: {

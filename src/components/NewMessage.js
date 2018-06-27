@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Form, TextArea, Button } from 'semantic-ui-react'
+import { Form, TextArea, Button, Grid } from 'semantic-ui-react'
 
 import { handleAddMessage } from '../actions/messages'
 import { MAX_LENGTH_MESSAGE } from '../constants/message'
-import { CURRENT_USER } from '../constants/authedUser'
 
 
 class NewMessage extends Component {
@@ -30,23 +29,33 @@ class NewMessage extends Component {
     return (
       <div>
         <Form className="new-message" onSubmit={this.handleSubmit}>
-          
-          <TextArea type="text"
-            className="input"
-            placeholder="Send a message. Example: hi @mario"
-            value={newMessage}
-            name="newMessage"
-            onChange={this.handleChange}
-            maxLength={MAX_LENGTH_MESSAGE}
-          /> 
-          <Button
-            positive
-            className="btn"
-            type="submit"
-            disabled={newMessage === ""}
-          >
-            Send
-          </Button>
+          <Grid>
+            <Grid.Column width={13}>
+              <TextArea type="text"
+                className="input"
+                placeholder="Send a message. Example: hi @mario"
+                value={newMessage}
+                name="newMessage"
+                onChange={this.handleChange}
+                maxLength={MAX_LENGTH_MESSAGE}
+              /> 
+            </Grid.Column>
+            
+            <Grid.Column width={3}>
+              <div className="btn-wrapper">
+                <Button
+                  positive
+                  className="btn"
+                  type="submit"
+                  disabled={newMessage === ""}
+                >
+                  Send
+                </Button>
+              </div>
+            </Grid.Column>
+          </Grid>
+
+
         </Form>
       </div>
     );

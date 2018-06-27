@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Icon } from 'semantic-ui-react'
 import UserCategory from './UserCategory'
 
 
@@ -10,7 +9,7 @@ class UsersList extends Component {
     const { active, idle, away } = this.props 
 
     return (
-      <div>
+      <div className="user-list">
         <div className="users-main-list">
           <div>
             <UserCategory category="active" users={active} />

@@ -16,21 +16,21 @@ export let users = {
       ]
   },
     {
-      id: 'kratos2',
-      name: 'Kratos2',
-      avatarURL: "https://upload.wikimedia.org/wikipedia/en/6/60/Kratos_PS4.jpg",
+      id: 'toad',
+      name: 'toad',
+      avatarURL: "https://www.mariowiki.com/images/thumb/d/db/SMR_Toad.png/170px-SMR_Toad.png",
       status: 'active',
       currentlyPlayingGame: '',
       lastActiveTimestamp: 1530127697642,
       responses: [
-        "Where is Hercules? ",
-        "Time to fight",
+        "Wanna play? ",
+        "3vs3?",
       ]
     },
     {
-      id: 'kratos3',
-      name: 'Kratos3',
-      avatarURL: "https://upload.wikimedia.org/wikipedia/en/6/60/Kratos_PS4.jpg",
+      id: 'assassin',
+      name: 'assassin',
+      avatarURL: "http://images4.fanpop.com/image/photos/19000000/Altair-altair-ibn-laahad-19091926-418-500.jpg",
       status: 'active',
       currentlyPlayingGame: '',
       lastActiveTimestamp: 1530127697643,
@@ -41,14 +41,14 @@ export let users = {
     },
 
       {
-      id: 'baraka',
-      name: 'Baraka',
-      avatarURL: "https://upload.wikimedia.org/wikipedia/en/a/a7/SubZeroMKXrender.png",
+      id: 'scorpion',
+      name: 'Scorpion',
+        avatarURL: "https://vignette.wikia.nocookie.net/mkwikia/images/a/ad/Scorpion_MKX_Render.png/revision/latest/scale-to-width-down/330?cb=20160515093908",
       status: 'idle',
       currentlyPlayingGame: '',
         lastActiveTimestamp: 1530127697644,
       responses: [
-        "this is fun ",
+        "Get over here!",
         "oooo yeah~",
       ]
     },
@@ -61,8 +61,8 @@ export let users = {
     currentlyPlayingGame: '',
     lastActiveTimestamp: 1530127697645,
     responses: [
-      "Hey! ",
-      "Lets play!",
+      "Hi! ",
+      "I'll join the game",
     ]
   },
     {

@@ -25,7 +25,7 @@ class App extends Component {
               randomUser.responses[randomMessageIndex], randomUser)
             )
           }
-        }, 5000
+        }, 10000
     )} catch (e) {
       console.log(e)
     }
@@ -39,13 +39,13 @@ class App extends Component {
         let timeDifferenceInSeconds = 0
         active.forEach((user) => {
           timeDifferenceInSeconds = (currentTime - user.lastActiveTimestamp) / 1000
-          console.log('timeDifferenceInMins: ', timeDifferenceInSeconds)
+          
           if (timeDifferenceInSeconds > ACTIVE_TO_IDLE_TIME_IN_SECONDS) {
             this.props.dispatch(updateUserStatus(user, 'idle'))
           }
         })
         
-      }, 5000)
+      }, 15000)
     } catch (e) {
       console.log(e)
     }

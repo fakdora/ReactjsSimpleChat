@@ -69,8 +69,6 @@ function dispatchResponseFromBot(bot, dispatch) {
     return
   }
 
-  const maximum = bot.responses.length - 1
-  const minimum = 0
   const randomResponseIndex = findRandomNumber(0, bot.responses.length - 1)
   const formattedResponse = formatMessage(bot.responses[randomResponseIndex], bot.id)
   dispatch(respondMessage(formattedResponse))

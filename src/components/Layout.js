@@ -34,11 +34,11 @@ class Layout extends Component {
         <Container>
           <Header as='h3' content='Chat room' style={style.h3} textAlign='center' />
           <Grid columns={2} doubling stackable>
-            <Grid.Column width={10}>
+            <Grid.Column width={10} className="chat-box">
               <Segment><MessagesList /></Segment>
               <NewMessage />
             </Grid.Column>
-            <Grid.Column width={6}>
+            <Grid.Column width={6} className="user-box">
               <Segment><UsersList /></Segment>
             </Grid.Column>
           </Grid>
