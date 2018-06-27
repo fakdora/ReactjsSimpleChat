@@ -1,6 +1,6 @@
 
 # Gamers' Chatroom
-* Multi-user chatroom where bots and an user can chat.
+Multi-user chatroom where bots and an user can chat.
 
 ## To run
 ```
