@@ -4,49 +4,103 @@
 export let users = {
   users: [
   {
-    id: 'sarahedo',
-    name: 'Sarah Edo',
-    avatarURL: "https://pbs.twimg.com/profile_images/675531002043699200/x7kAHIgw_400x400.jpg",
+    id: 'kratos',
+    name: 'Kratos',
+      avatarURL: "https://upload.wikimedia.org/wikipedia/en/6/60/Kratos_PS4.jpg",
     status: 'active',
     currentlyPlayingGame: '',
-    lastActiveTimestamp: 1467166872634,
-  },
-  {
-    id: 'tyler',
-    name: 'Tyler McGinnis',
-    avatarURL: "https://pbs.twimg.com/profile_images/743087049192919040/Wmug__uf_400x400.jpg",
-    status: 'away',
-    currentlyPlayingGame: 'battlefield',
-    lastActiveTimestamp: 1489579767190,
+      lastActiveTimestamp: 1530127697641,
+      responses: [
+        "Where is Hercules? ",
+        "Time to fight",
+      ]
   },
     {
-      id: 'tyler1',
-      name: 'Tyler McGinnis',
-      avatarURL: "https://pbs.twimg.com/profile_images/743087049192919040/Wmug__uf_400x400.jpg",
-      status: 'away',
+      id: 'kratos2',
+      name: 'Kratos2',
+      avatarURL: "https://upload.wikimedia.org/wikipedia/en/6/60/Kratos_PS4.jpg",
+      status: 'active',
       currentlyPlayingGame: '',
-      lastActiveTimestamp: 1489579767190,
+      lastActiveTimestamp: 1530127697642,
+      responses: [
+        "Where is Hercules? ",
+        "Time to fight",
+      ]
     },
+    {
+      id: 'kratos3',
+      name: 'Kratos3',
+      avatarURL: "https://upload.wikimedia.org/wikipedia/en/6/60/Kratos_PS4.jpg",
+      status: 'active',
+      currentlyPlayingGame: '',
+      lastActiveTimestamp: 1530127697643,
+      responses: [
+        "Where is Hercules? ",
+        "Time to fight",
+      ]
+    },
+
+      {
+      id: 'baraka',
+      name: 'Baraka',
+      avatarURL: "https://upload.wikimedia.org/wikipedia/en/a/a7/SubZeroMKXrender.png",
+      status: 'idle',
+      currentlyPlayingGame: '',
+        lastActiveTimestamp: 1530127697644,
+      responses: [
+        "this is fun ",
+        "oooo yeah~",
+      ]
+    },
+
   {
-    id: 'johndoe',
-    name: 'John Doe',
-    avatarURL: "https://upload.wikimedia.org/wikipedia/commons/c/c9/David_Robinson_%28Team_USA%29.jpg",
+    id: 'jimraynor',
+    name: 'Jim Raynor',
+    avatarURL: "https://vignette.wikia.nocookie.net/starcraft/images/a/ad/JimRaynor_SC2_Head2.jpg/revision/latest/scale-to-width-down/328?cb=20151129213613",
     status: 'idle',
     currentlyPlayingGame: '',
-    lastActiveTimestamp: 1488579767190,
+    lastActiveTimestamp: 1530127697645,
+    responses: [
+      "Hey! ",
+      "Lets play!",
+    ]
   },
     {
       id: 'mario',
       name: 'Mario',
-      avatarURL: "https://upload.wikimedia.org/wikipedia/commons/c/c9/David_Robinson_%28Team_USA%29.jpg",
+      avatarURL: "https://upload.wikimedia.org/wikipedia/en/9/99/MarioSMBW.png",
       status: 'idle',
       currentlyPlayingGame: '',
-      lastActiveTimestamp: 1488579767190,
+      lastActiveTimestamp: 1530127697646,
       responses: [
         "Hey! It's me! Mario~",
         "Lets-a go!",
       ]
-    }
+    },
+        {
+      id: 'zelda',
+      name: 'Zelda',
+      avatarURL: "https://upload.wikimedia.org/wikipedia/en/6/60/Fc_zelda.jpg",
+      status: 'away',
+      currentlyPlayingGame: 'Battlefield V',
+          lastActiveTimestamp: 1530127697647,
+      responses: [
+        "Find those crystals ",
+        "Save Hyrule please",
+      ]
+    },
+    {
+      id: 'subzero',
+      name: 'Sub zero',
+      avatarURL: "https://upload.wikimedia.org/wikipedia/en/a/a7/SubZeroMKXrender.png",
+      status: 'away',
+      currentlyPlayingGame: 'Battlefield V',
+      lastActiveTimestamp: 1530127697648,
+      responses: [
+        "this is fun ",
+        "oooo yeah~",
+      ]
+    },
 
 ]
 }
@@ -54,95 +108,38 @@ export let users = {
 export let messages = {
   messages: [
   {
-    text: '8xf0y6ziyjabvozdd253nd',
-    author: 'sarahedo',
-    timestamp: 1467166872634,
+    text: "let's play 5vs5",
+      author: 'zelda',
+      timestamp: 1530127697641,
   },
   {
-    text: '6ni6ok3ym7mf1p33lnez',
-    author: 'johndoe',
-    timestamp: 1468479767190,
+    text: 'ready to play?',
+    author: 'subzero',
+    timestamp: 1530127697642,
   },
   {
-    text: 'am8ehyc8byjqgar0jgpub9',
-    author: 'sarahedo',
-    timestamp: 1488579767190,
+    text: 'oh yeah~!',
+    author: 'zelda',
+    timestamp: 1530127697643,
   },
   {
-    text: 'loxhs1bqm25b708cmbf3g',
-    author: 'tylermcginnis',
-    timestamp: 1482579767190,
+    text: 'everything is good',
+    author: 'zelda',
+    timestamp: 1530127697644,
   },
   {
-    text: 'vthrdm985a262al8qx3do',
-    author: 'tylermcginnis',
-    timestamp: 1489579767190,
+    text: 'gogogo~',
+    author: 'zelda',
+    timestamp: 1530127697645,
+  },
+  {
+    text: "how's it going?",
+    author: 'kratos',
+    timestamp: 1530127697646,
   },
   {
     text: "hey",
-    author: 'johndoe',
-    timestamp: 1493579767190,
+    author: 'jimraynor',
+    timestamp: 1530127697647,
   },
 ]}
-
-
-export let messages1 = [
-  "8xf0y6ziyjabvozdd253nd": {
-    id: '8xf0y6ziyjabvozdd253nd',
-    author: 'sarahedo',
-    timestamp: 1467166872634,
-  },
-  "6ni6ok3ym7mf1p33lnez": {
-    id: '6ni6ok3ym7mf1p33lnez',
-    author: 'johndoe',
-    timestamp: 1468479767190,
-  },
-  "am8ehyc8byjqgar0jgpub9": {
-    id: 'am8ehyc8byjqgar0jgpub9',
-    author: 'sarahedo',
-    timestamp: 1488579767190,
-  },
-  "loxhs1bqm25b708cmbf3g": {
-    id: 'loxhs1bqm25b708cmbf3g',
-    author: 'tylermcginnis',
-    timestamp: 1482579767190,
-  },
-  "vthrdm985a262al8qx3do": {
-    id: 'vthrdm985a262al8qx3do',
-    author: 'tylermcginnis',
-    timestamp: 1489579767190,
-  },
-  "xj352vofupe1dqz9emx13r": {
-    id: 'xj352vofupe1dqz9emx13r',
-    author: 'johndoe',
-    timestamp: 1493579767190,
-  },
-]
-
-export let users1 = {
-  members: [
-    {
-      id: 'sarahedo',
-      name: 'Sarah Edo',
-      avatarURL: "https://pbs.twimg.com/profile_images/675531002043699200/x7kAHIgw_400x400.jpg",
-      status: 'active',
-      currentlyPlayingGame: '',
-      lastActiveTimestamp: 1467166872634,
-    },
-    {
-      id: 'tylermcginnis',
-      name: 'Tyler McGinnis',
-      avatarURL: "https://pbs.twimg.com/profile_images/743087049192919040/Wmug__uf_400x400.jpg",
-      status: 'away',
-      currentlyPlayingGame: 'battlefield',
-      lastActiveTimestamp: 1489579767190,
-    },
-    {
-      id: 'johndoe',
-      name: 'John Doe',
-      avatarURL: "https://upload.wikimedia.org/wikipedia/commons/c/c9/David_Robinson_%28Team_USA%29.jpg",
-      status: 'idle',
-      currentlyPlayingGame: '',
-      lastActiveTimestamp: 1488579767190,
-    }]
-}

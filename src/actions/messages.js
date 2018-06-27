@@ -1,6 +1,6 @@
-import { showLoading, hideLoading } from 'react-redux-loading'
 import { CURRENT_USER } from '../constants/authedUser'
 import { updateLastActiveTimestamp } from './users';
+import { findRandomNumber } from '../utils/helpers'
 
 export const RECEIVE_MESSAGES = "RECEIVE_MESSAGES"
 export const ADD_MESSAGE = "ADD_MESSAGE"
@@ -13,9 +13,24 @@ export function receiveMessages(messages) {
   }
 }
 
-export function handleAddMessage(message) {
+export function handleAutoAddMessageByBot(message, bot=null) {
   return (dispatch, getState) => {
-    const formattedMessage = formatMessage(message, CURRENT_USER)
+    let formattedMessage = null
+
+    formattedMessage = formatMessage(message, bot.id)
+    dispatch(addMessage(formattedMessage))
+    dispatch(updateLastActiveTimestamp(bot))
+  }
+}
+
+export function handleAddMessage(message, user="") {
+  return (dispatch, getState) => {
+    let formattedMessage = null
+    if(user === "") {
+      formattedMessage = formatMessage(message, CURRENT_USER)
+    } else {
+      formattedMessage = formatMessage(message, user)
+    }
     dispatch(addMessage(formattedMessage))
     dispatch(handleRespondMessageFromBot(message))
   }
@@ -56,21 +71,19 @@ function dispatchResponseFromBot(bot, dispatch) {
 
   const maximum = bot.responses.length - 1
   const minimum = 0
-  const randomResponseIndex = Math.floor(
-      Math.random() * (maximum - minimum + 1)
-    ) + minimum
+  const randomResponseIndex = findRandomNumber(0, bot.responses.length - 1)
   const formattedResponse = formatMessage(bot.responses[randomResponseIndex], bot.id)
   dispatch(respondMessage(formattedResponse))
   dispatch(updateLastActiveTimestamp(bot))
 }
 
 function displayAwayMessage(bot, dispatch) {
-  let message = "User can't respond to you right now. "
+  let message = "<User can't respond to you right now. "
 
   if (bot.currentlyPlayingGame) {
-    message += `Currently playing ${bot.currentlyPlayingGame}.`
+    message += `Currently playing ${bot.currentlyPlayingGame}.>`
   } else {
-    message += "Currently logged off."
+    message += "Currently logged off.>"
   }
   const formattedResponse = formatMessage(message, 'admin')
   dispatch(respondMessage(formattedResponse))

@@ -9,6 +9,11 @@ ul {
   list-style: none;
 }
 
+.btn {
+  display: block;
+  margin: 20px auto;
+}
+
 .user-avatar {
   height: 50px;
   border-radius: 50%;

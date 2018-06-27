@@ -16,17 +16,13 @@ export default function messages(state=[], action) {
     }
 
     case ADD_MESSAGE: {
-      return [
-        ...state,
-        action.message
-      ]
+      let newState = [...state, action.message]
+      return newState.slice(newState.length - 50, newState.length)
     }
 
     case RESPOND_MESSAGE: {
-      return [
-        ...state,
-        action.message
-      ]
+      let newState = [...state, action.message]
+      return newState.slice(newState.length - 50, newState.length)
     } 
 
     default: {

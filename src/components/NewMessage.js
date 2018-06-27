@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Form, TextArea, Button } from 'semantic-ui-react'
 
 import { handleAddMessage } from '../actions/messages'
 import { MAX_LENGTH_MESSAGE } from '../constants/message'
@@ -28,23 +29,25 @@ class NewMessage extends Component {
 
     return (
       <div>
-        <form className="new-message" onSubmit={this.handleSubmit}>
+        <Form className="new-message" onSubmit={this.handleSubmit}>
           
-          <textarea type="text"
+          <TextArea type="text"
             className="input"
-            placeholder="Type your message"
+            placeholder="Send a message. Example: hi @mario"
             value={newMessage}
             name="newMessage"
             onChange={this.handleChange}
             maxLength={MAX_LENGTH_MESSAGE}
           /> 
-          <button
+          <Button
+            positive
             className="btn"
             type="submit"
-            disabled={newMessage === ""}>
-            Submit
-          </button>
-        </form>
+            disabled={newMessage === ""}
+          >
+            Send
+          </Button>
+        </Form>
       </div>
     );
   }
