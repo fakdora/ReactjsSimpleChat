@@ -1,1 +1,1 @@
-export const CURRENT_USER = "tester1"
+export const CURRENT_USER = "User1"

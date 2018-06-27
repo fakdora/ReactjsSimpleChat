@@ -76,14 +76,14 @@ function dispatchResponseFromBot(bot, dispatch) {
 }
 
 function displayAwayMessage(bot, dispatch) {
-  let message = "<User can't respond to you right now. "
+  let message = "<<User can't respond to you right now. "
 
   if (bot.currentlyPlayingGame) {
-    message += `Currently playing ${bot.currentlyPlayingGame}.>`
+    message += `Currently playing ${bot.currentlyPlayingGame}>>`
   } else {
     message += "Currently logged off.>"
   }
-  const formattedResponse = formatMessage(message, 'admin')
+  const formattedResponse = formatMessage(message, 'auto msg')
   dispatch(respondMessage(formattedResponse))
 }
 
