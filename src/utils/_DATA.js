@@ -13,6 +13,9 @@ export let users = {
       responses: [
         "Where is Hercules? ",
         "Time to fight",
+        "I haven't forgotten you. For what you did that night, this city will be your grave...",
+        "I will send you back to the depths of Hades!",
+        "all Olympus tremble at my name"
       ]
   },
     {
@@ -25,6 +28,7 @@ export let users = {
       responses: [
         "Wanna play? ",
         "3vs3?",
+        "mario, it's time to rescue the princess"
       ]
     },
     {
@@ -35,8 +39,10 @@ export let users = {
       currentlyPlayingGame: '',
       lastActiveTimestamp: 1530127697643,
       responses: [
-        "Where is Hercules? ",
-        "Time to fight",
+        "I'm from Rome",
+        "This is the Brotherhood",
+        "The best. May it never change",
+        
       ]
     },
 
@@ -49,7 +55,9 @@ export let users = {
         lastActiveTimestamp: 1530127697644,
       responses: [
         "Get over here!",
-        "oooo yeah~",
+        "What is this? You are not Sub-Zero.",
+        "I am here.",
+        "The Shirai-Ryu are dead."
       ]
     },
 
@@ -63,6 +71,9 @@ export let users = {
     responses: [
       "Hi! ",
       "I'll join the game",
+      "gogogo~",
+      "Dammit, Sarah! It didn't have to be like this!",
+      "All right. Sell me."
     ]
   },
     {
@@ -138,7 +149,7 @@ export let messages = {
     timestamp: 1530127697646,
   },
   {
-    text: "hey",
+    text: "anybody here?",
     author: 'jimraynor',
     timestamp: 1530127697647,
   },
