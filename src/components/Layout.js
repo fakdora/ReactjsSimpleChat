@@ -32,7 +32,7 @@ class Layout extends Component {
     return (
       <div>
         <Container>
-          <Header as='h3' content='Chat room' style={style.h3} textAlign='center' />
+          <Header as='h3' content="Gamers' Chatroom" style={style.h3} textAlign='center' />
           <Grid columns={2} doubling stackable>
             <Grid.Column width={10} className="chat-box">
               <Segment><MessagesList /></Segment>

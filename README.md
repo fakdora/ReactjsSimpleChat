@@ -1,6 +1,8 @@
 
 # Gamers' Chatroom
 Multi-user chatroom where bots and an user can chat.
+Live version is on Heroku, 
+https://gamers-chatroom.herokuapp.com/
 
 ## To run
 ```
