@@ -7,7 +7,7 @@ export let users = {
     id: 'kratos',
     name: 'Kratos',
       avatarURL: "https://upload.wikimedia.org/wikipedia/en/6/60/Kratos_PS4.jpg",
-    status: 'active',
+    status: 'idle',
     currentlyPlayingGame: '',
       lastActiveTimestamp: 1530127697641,
       responses: [
@@ -22,7 +22,7 @@ export let users = {
       id: 'toad',
       name: 'toad',
       avatarURL: "https://www.mariowiki.com/images/thumb/d/db/SMR_Toad.png/170px-SMR_Toad.png",
-      status: 'active',
+      status: 'idle',
       currentlyPlayingGame: '',
       lastActiveTimestamp: 1530127697642,
       responses: [
@@ -35,7 +35,7 @@ export let users = {
       id: 'assassin',
       name: 'assassin',
       avatarURL: "http://images4.fanpop.com/image/photos/19000000/Altair-altair-ibn-laahad-19091926-418-500.jpg",
-      status: 'active',
+      status: 'idle',
       currentlyPlayingGame: '',
       lastActiveTimestamp: 1530127697643,
       responses: [
